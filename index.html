@@ -27,40 +27,40 @@
 <main>
     <section id="main">
         <img id="main__image" src="assets/main.jpg" alt="Главное фото">
-        <div id="main__text">
+        <article id="main__text">
             <h2 id="main__heading">Добро пожаловать в нашу кондитерскую!</h2>
             <p id="main__description">Здесь вы найдете сладости на любой вкус. Наша кондитерская предлагает уникальные
                 рецепты и свежие ингредиенты для создания восхитительных десертов.</p>
-        </div>
+        </article>
     </section>
 
     <section id="catalog">
         <h2 id="catalog__title">Наш каталог товаров</h2>
         <div id="catalog__list">
-            <article class="catalog__item">
+            <div class="catalog__item">
                 <img class="catalog__image" src="assets/cakes.png" alt="Торты">
                 <h3 class="catalog__item-title">Торты</h3>
-            </article>
-            <article class="catalog__item">
+            </div>
+            <div class="catalog__item">
                 <img class="catalog__image" src="assets/baked.png" alt="Выпечка">
                 <h3 class="catalog__item-title">Выпечка</h3>
-            </article>
-            <article class="catalog__item">
+            </div>
+            <div class="catalog__item">
                 <img class="catalog__image" src="assets/cupcakes.png" alt="Капкейки">
                 <h3 class="catalog__item-title">Капкейки</h3>
-            </article>
-            <article class="catalog__item">
+            </div>
+            <div class="catalog__item">
                 <img class="catalog__image" src="assets/seasonal.png" alt="Сезонные новинки">
                 <h3 class="catalog__item-title">Сезонные новинки</h3>
-            </article>
-            <article class="catalog__item">
+            </div>
+            <div class="catalog__item">
                 <img class="catalog__image" src="assets/pastries.png" alt="Пирожные">
                 <h3 class="catalog__item-title">Пирожные</h3>
-            </article>
-            <article class="catalog__item">
+            </div>
+            <div class="catalog__item">
                 <img class="catalog__image" src="assets/other.png" alt="Другие десерты">
                 <h3 class="catalog__item-title">Другие десерты</h3>
-            </article>
+            </div>
         </div>
     </section>
 
@@ -80,11 +80,30 @@
         </div>
     </section>
 
+    <section id="comments">
+        <h2 id="comments__title">Отзывы</h2>
+        <div id="comments__list">
+            <article class="comments__item">
+                <h3 class="comments__author">Мария</h3>
+                <p class="comments__text">"Прекрасные десерты! Все было очень вкусно и красиво оформлено."</p>
+            </article>
+            <article class="comments__item">
+                <h3 class="comments__author">Иван</h3>
+                <p class="comments__text">"Спасибо за шикарный торт на день рождения! Все гости были в восторге."</p>
+            </article>
+            <article class="comments__item">
+                <h3 class="comments__author">Ольга</h3>
+                <p class="comments__text">"Лучшие пирожные в городе! Обязательно закажу снова."</p>
+            </article>
+        </div>
+    </section>
+
+
     <section id="quote">
         <blockquote><em>«Настоящее волшебство — это когда кулинария соединяется с любовью.»</em></blockquote>
     </section>
 
-    <section>
+    <section id="code">
         <pre>
 <code>
 function orderCake(cakeName) {

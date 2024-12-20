@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор заказа</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/table.css">
+    <script src="js/table_constructor.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<header>
+    <div id="header__logo">
+        <img id="header__logo-image" src="assets/img8.png" alt="Логотип кондитерской 'Sweet World'">
+        <h1 id="header__title">Sweet World</h1>
+    </div>
+    <nav>
+        <ul>
+            <li class="header__menu-item"><a href="index.html" class="header__link">Главная</a></li>
+            <li class="header__menu-item"><a href="gallery.html" class="header__link">Галерея</a></li>
+            <li class="header__menu-item"><a href="table_constructor.html" class="header__link">Конструктор заказов</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="order-constructor">
+        <h2>Конструктор заказа</h2>
+        <form id="add-item-form">
+            <label>
+                Название десерта:
+                <input type="text" id="dessert-name" placeholder="Название" required>
+            </label>
+            <label>
+                Количество:
+                <input type="number" id="dessert-quantity" placeholder="1" min="1" required>
+            </label>
+            <button type="submit">Добавить в заказ</button>
+        </form>
+
+        <table id="order-table" class="custom-table">
+            <thead>
+            <tr>
+                <th>Название десерта</th>
+                <th>Количество</th>
+                <th>Удалить</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+</main>
+<footer id="footer">
+    <p id="footer__text">© 2024 Кондитерская "Sweet World". Все права защищены.</p>
+</footer>
+</body>
+</html>

@@ -6,8 +6,16 @@
     <meta name="description"
           content="Кондитерская 'Sweet World' предлагает множество вкусных десертов на заказ. Мы создаем сладости с любовью и заботой.">
     <title>Sweet World</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/img8.png" type="image/png">
+    <script src="js/script.js" defer></script>
+    <script src="js/fetchData.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/toastify-js/src/toastify.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/toastify-js"></script>
+
+
 </head>
 <body>
 <header>
@@ -17,10 +25,10 @@
     </div>
     <nav>
         <ul>
-            <li class="header__menu-item"><a href="#main" class="header__link">Главная</a></li>
-            <li class="header__menu-item"><a href="#catalog" class="header__link">Каталог</a></li>
-            <li class="header__menu-item"><a href="#gallery" class="header__link">Галерея</a></li>
-            <li class="header__menu-item"><a href="#comments" class="header__link">Отзывы</a></li>
+            <li class="header__menu-item"><a href="index.html" class="header__link">Главная</a></li>
+            <li class="header__menu-item"><a href="gallery.html" class="header__link">Галерея</a></li>
+            <li class="header__menu-item"><a href="table_constructor.html" class="header__link">Конструктор заказов</a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -38,27 +46,27 @@
         <h2 id="catalog__title">Наш каталог товаров</h2>
         <div id="catalog__list">
             <div class="catalog__item">
-                <img class="catalog__image" src="assets/cakes.png" alt="Торты">
+                <img class="catalog__image" src="assets/cakes.jpg" alt="Торты">
                 <h3 class="catalog__item-title">Торты</h3>
             </div>
             <div class="catalog__item">
-                <img class="catalog__image" src="assets/baked.png" alt="Выпечка">
+                <img class="catalog__image" src="assets/baked.jpg" alt="Выпечка">
                 <h3 class="catalog__item-title">Выпечка</h3>
             </div>
             <div class="catalog__item">
-                <img class="catalog__image" src="assets/cupcakes.png" alt="Капкейки">
+                <img class="catalog__image" src="assets/cupcakes.jpg" alt="Капкейки">
                 <h3 class="catalog__item-title">Капкейки</h3>
             </div>
             <div class="catalog__item">
-                <img class="catalog__image" src="assets/seasonal.png" alt="Сезонные новинки">
+                <img class="catalog__image" src="assets/seasonal.jpg" alt="Сезонные новинки">
                 <h3 class="catalog__item-title">Сезонные новинки</h3>
             </div>
             <div class="catalog__item">
-                <img class="catalog__image" src="assets/pastries.png" alt="Пирожные">
+                <img class="catalog__image" src="assets/pastries.jpg" alt="Пирожные">
                 <h3 class="catalog__item-title">Пирожные</h3>
             </div>
             <div class="catalog__item">
-                <img class="catalog__image" src="assets/other.png" alt="Другие десерты">
+                <img class="catalog__image" src="assets/other.jpg" alt="Другие десерты">
                 <h3 class="catalog__item-title">Другие десерты</h3>
             </div>
         </div>
@@ -66,19 +74,26 @@
 
     <section id="gallery">
         <h2 id="gallery__title">Наша галерея</h2>
-        <div id="gallery__grid">
-            <div class="gallery__item"><img class="gallery__image" src="assets/gallery1.jpg" alt="Фото 1"></div>
-            <div class="gallery__item"><img class="gallery__image" src="assets/gallery2.jpg" alt="Фото 2"></div>
-            <div class="gallery__item"><img class="gallery__image" src="assets/gallery3.jpg" alt="Фото 3"></div>
-            <div class="gallery__item"><img class="gallery__image" src="assets/gallery4.jpg" alt="Фото 4"></div>
-            <div class="gallery__item"><img class="gallery__image" src="assets/gallery5.jpg" alt="Фото 5"></div>
-            <div class="gallery__item"><img class="gallery__image" src="assets/gallery6.jpg" alt="Фото 6"></div>
-            <div class="gallery__item"><img class="gallery__image" src="assets/gallery7.jpg" alt="Фото 7"></div>
-            <div class="gallery__item"><img class="gallery__image" src="assets/gallery8.jpg" alt="Фото 8"></div>
-            <div class="gallery__item"><img class="gallery__image" src="assets/gallery9.jpg" alt="Фото 9"></div>
-            <div class="gallery__item"><img class="gallery__image" src="assets/gallery10.jpg" alt="Фото 10"></div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="gallery__image" src="assets/gallery1.jpg" alt="Фото 1"></div>
+                <div class="swiper-slide"><img class="gallery__image" src="assets/gallery2.jpg" alt="Фото 2"></div>
+                <div class="swiper-slide"><img class="gallery__image" src="assets/gallery3.jpg" alt="Фото 3"></div>
+                <div class="swiper-slide"><img class="gallery__image" src="assets/gallery4.jpg" alt="Фото 4"></div>
+                <div class="swiper-slide"><img class="gallery__image" src="assets/gallery5.jpg" alt="Фото 5"></div>
+                <div class="swiper-slide"><img class="gallery__image" src="assets/gallery6.jpg" alt="Фото 6"></div>
+                <div class="swiper-slide"><img class="gallery__image" src="assets/gallery7.jpg" alt="Фото 7"></div>
+                <div class="swiper-slide"><img class="gallery__image" src="assets/gallery8.jpg" alt="Фото 8"></div>
+                <div class="swiper-slide"><img class="gallery__image" src="assets/gallery9.jpg" alt="Фото 9"></div>
+                <div class="swiper-slide"><img class="gallery__image" src="assets/gallery10.jpg" alt="Фото 10"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
+
 
     <section id="comments">
         <h2 id="comments__title">Отзывы</h2>
@@ -98,6 +113,12 @@
         </div>
     </section>
 
+    <div id="comments-container">
+        <img src="assets/pre.gif" id="preloader" style="display: none;" alt="Загрузка..."/>
+        <ul id="comments-list"></ul>
+        <div id="error-message" style="display: none; color: red;">⚠ Что-то пошло не так...</div>
+    </div>
+
 
     <section id="quote">
         <blockquote><em>«Настоящее волшебство — это когда кулинария соединяется с любовью.»</em></blockquote>
@@ -111,27 +132,29 @@ function orderCake(cakeName) {
 }
 </code>
         </pre>
+    </section>
+    <section id="ascii">
 
-        <pre id="ascii">
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠚⠉⠙⢳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⡞⢻⠄⠀⢻⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠋⠀⠸⡘⢷⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⢀⣀⠤⠔⠊⠁⠀⠀⠀⠀⠑⠒⠫⡛⢶⡄⣀⡀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⢠⡞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠚⠉⠉⠙⢷⡀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⢸⣜⢢⣤⣤⣤⣀⣒⡠⠤⠴⠒⠋⠉⠀⠀⠀⠀⠀⡸⣸⠃⠀⠀⠀
-    ⠀⠀⢀⡠⠔⠊⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠔⣪⠔⠉⠩⡓⣦⠀
-    ⠀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡠⠼⠖⠊⠉⠀⠀⠀⠀⢸⢸⡇
-    ⣸⡔⠀⠀⠀⡠⣐⡤⠤⠴⠒⠒⠚⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠜⣼⣅
-    ⣿⢧⠀⠀⢸⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡠⠤⠖⠉⢀⢾
-    ⠘⠷⣷⣂⠤⠻⣦⣀⡠⠴⠮⣍⣒⠠⠤⠤⢀⣒⡭⢤⣖⣋⣉⡠⠤⠴⠦⠖
-    ⠀⠀⠸⣷⠦⠒⠶⣶⠶⢴⠲⠦⡟⠯⡭⢿⣅⢴⠶⣄⢴⢶⡤⡲⡦⢲⠖⣺⠇⠀
-    ⠀⠀⠀⢹⡄⠸⡄⠸⡄⠈⡇⠀⢹⠀⢸⠁⠀⢸⠀⠀⢸⠀⢀⠇⠀⡏⢠⡏⠀⠀
-    ⠀⠀⠀⠀⣷⠀⢧⠀⡇⠀⡇⠀⢸⠀⢸⠀⠀⢸⠀⠀⡇⠀⢸⠀⢸⢀⡿⠀⠀⠀
-    ⠀⠀⠀⠀⠸⡇⢸⡀⢱⠀⣷⠀⢸⠀⢸⠀⠀⢸⠀⢀⠇⠀⡎⠀⡎⣸⠃⠀⠀⠀
-    ⠀⠀⠀⠀⠀⢻⡀⣇⠸⡄⢸⠀⢸⠀⢸⠀⠀⡆⠀⢸⠀⢀⠇⢸⢡⡟⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠘⣇⢸⡀⡇⢸⠀⢸⠀⢸⠀⠀⡇⠀⡎⠀⢸⠀⡆⣼⠁⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⢻⡀⣇⢹⠘⡄⢸⠀⢸⠀⠀⡇⢀⠃⠀⡌⢰⢱⡟⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠘⠧⢤⣼⣤⣥⣬⣤⣬⣤⣤⣥⣬⣤⡤⠥⠬⠾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        <pre>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠚⠉⠙⢳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⡞⢻⠄⠀⢻⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠋⠀⠸⡘⢷⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⣀⠤⠔⠊⠁⠀⠀⠀⠀⠑⠒⠫⡛⢶⡄⣀⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⡞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠚⠉⠉⠙⢷⡀⠀⠀⠀
+⠀⠀⠀⠀⠀⢸⣜⢢⣤⣤⣤⣀⣒⡠⠤⠴⠒⠋⠉⠀⠀⠀⠀⠀⡸⣸⠃⠀⠀⠀
+⠀⠀⢀⡠⠔⠊⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠔⣪⠔⠉⠩⡓⣦⠀
+⠀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡠⠼⠖⠊⠉⠀⠀⠀⠀⢸⢸⡇
+⣸⡔⠀⠀⠀⡠⣐⡤⠤⠴⠒⠒⠚⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠜⣼⣅
+⣿⢧⠀⠀⢸⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡠⠤⠖⠉⢀⢾
+⠘⠷⣷⣂⠤⠻⣦⣀⡠⠴⠮⣍⣒⠠⠤⠤⢀⣒⡭⢤⣖⣋⣉⡠⠤⠴⠦⠖
+⠀⠀⠸⣷⠦⠒⠶⣶⠶⢴⠲⠦⡟⠯⡭⢿⣅⢴⠶⣄⢴⢶⡤⡲⡦⢲⠖⣺⠇⠀
+⠀⠀⠀⢹⡄⠸⡄⠸⡄⠈⡇⠀⢹⠀⢸⠁⠀⢸⠀⠀⢸⠀⢀⠇⠀⡏⢠⡏⠀⠀
+⠀⠀⠀⠀⣷⠀⢧⠀⡇⠀⡇⠀⢸⠀⢸⠀⠀⢸⠀⠀⡇⠀⢸⠀⢸⢀⡿⠀⠀⠀
+⠀⠀⠀⠀⠸⡇⢸⡀⢱⠀⣷⠀⢸⠀⢸⠀⠀⢸⠀⢀⠇⠀⡎⠀⡎⣸⠃⠀⠀⠀
+⠀⠀⠀⠀⠀⢻⡀⣇⠸⡄⢸⠀⢸⠀⢸⠀⠀⡆⠀⢸⠀⢀⠇⢸⢡⡟⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⣇⢸⡀⡇⢸⠀⢸⠀⢸⠀⠀⡇⠀⡎⠀⢸⠀⡆⣼⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢻⡀⣇⢹⠘⡄⢸⠀⢸⠀⠀⡇⢀⠃⠀⡌⢰⢱⡟⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠘⠧⢤⣼⣤⣥⣬⣤⣬⣤⣤⣥⣬⣤⡤⠥⠬⠾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
         </pre>
     </section>
 </main>

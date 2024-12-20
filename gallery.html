@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="кондитерская, галерея, десерты, фотографии">
+    <meta name="description" content="Галерея продукции кондитерской 'Sweet World'">
+    <title>Галерея | Sweet World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="icon" href="assets/img8.png" type="image/png">
+    <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
+</head>
+<body>
+<header>
+    <div id="header__logo">
+        <img id="header__logo-image" src="assets/img8.png" alt="Логотип кондитерской 'Sweet World'">
+        <h1 id="header__title">Sweet World</h1>
+    </div>
+    <nav>
+        <ul>
+            <li class="header__menu-item"><a href="index.html" class="header__link">Главная</a></li>
+            <li class="header__menu-item"><a href="gallery.html" class="header__link">Галерея</a></li>
+            <li class="header__menu-item"><a href="table_constructor.html" class="header__link">Конструктор заказов</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="gallery">
+        <h2 id="gallery__title">Галерея продукции</h2>
+
+        <div class="gallery__filters">
+            <button class="filter-button" onclick="filterGallery('all')">Все</button>
+            <button class="filter-button" onclick="filterGallery('cakes')">Торты</button>
+            <button class="filter-button" onclick="filterGallery('cupcakes')">Капкейки</button>
+            <button class="filter-button" onclick="filterGallery('pastries')">Выпечка</button>
+        </div>
+
+        <div class="gallery__grid" id="galleryGrid">
+            <div class="gallery__item cakes">
+                <img class="gallery__image" src="assets/cakes.jpg" alt="Торт шоколадный">
+                <div class="gallery__caption">Торт шоколадный</div>
+            </div>
+            <div class="gallery__item cupcakes">
+                <img class="gallery__image" src="assets/cupcakes.jpg" alt="Капкейки 'Шоколадный деликатес'">
+                <div class="gallery__caption">Капкейки</div>
+            </div>
+            <div class="gallery__item pastries">
+                <img class="gallery__image" src="assets/pastries.jpg" alt="Булочки с корицей">
+                <div class="gallery__caption">Булочки с корицей</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="footer">
+    <p id="footer__text">© 2024 Кондитерская "Sweet World". Все права защищены.</p>
+</footer>
+
+</body>
+</html>
